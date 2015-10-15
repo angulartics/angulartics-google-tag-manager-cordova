@@ -1,0 +1,35 @@
+{
+  "name": "angulartics-google-tag-manager-cordova",
+  "version": "0.0.0",
+  "description": "Google Tag Manager plugin for Angulartics",
+  "keywords": [
+    "google",
+    "tag manager",
+    "plugin",
+    "angular",
+    "angulartics",
+    "cordova"
+  ],
+  "author": "Jared Dickson <code@jareddickson.com>",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "mkdir -p dist && uglifyjs lib/angulartics-google-tag-manager-cordova.js --compress --source-map dist/angulartics-google-tag-manager-cordova.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-google-tag-manager-cordova.min.js.map -o dist/angulartics-google-tag-manager-cordova.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angulartics/angulartics-google-tag-manager-cordova.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angulartics/angulartics-google-tag-manager-cordova/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/angulartics/angulartics-google-tag-manager-cordova",
+  "dependencies": {
+    "angulartics": "~0.20"
+  },
+  "devDependencies": {
+    "uglify-js": "^2.5.0"
+  }
+}
